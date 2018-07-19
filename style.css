@@ -1,0 +1,139 @@
+svg {
+    display: block;
+    margin: 20px auto;
+    max-width: 100px;
+}
+
+#base {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.logo-container {
+    position: relative;
+    background: #fff;
+}
+
+
+body {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.transform-log, .palette-log {
+    font-family: Menlo;
+    font-size: 10px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.transform-log {
+    bottom: 30px;
+}
+.palette-log {
+    left: 10px;
+}
+
+body.negative .transform-log {
+    color: #fff;
+}
+
+body.negative {
+    background: #191919;
+}
+
+
+body.negative .logo-container {
+    background: #191919;
+}
+
+body.negative svg text tspan {
+    fill: #fff;
+    color: #fff;
+}
+
+.view_toggler {
+    z-index: 1000;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 5px;
+}
+
+
+body.showcase .logo-container {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+body.showcase .logo-container svg {
+    margin: 0;
+}
+
+body.showcase .logo-container:last-child {
+    opacity: 1;
+    width: auto;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+body.showcase .logo-container:last-child svg {
+    margin: 300px auto;
+    margin-bottom: 0;
+    transform: scale(2);
+}
+
+body.history .logo-container {
+    width: 20%;
+    display: inline-block;
+}
+
+body.history .logo-container .palette-log {
+    display: none;
+}
+
+
+body.history .logo-container .transform-log {
+    display: none;
+}
+
+
+button.terminator-btn {
+    display: none;
+    -webkit-appearance: none;
+    border: 0;
+    color: #e8646e;
+    font-size: 10px;
+    margin: 0 auto;
+    position: relative;
+    top: -20px;
+}
+
+body.terminate button.terminator-btn {
+    display: block;
+}
+
+body.showcase button.terminator-btn {
+    display: none !important;
+}
+
+#counter-log {
+    z-index: 1000;
+    position: fixed;
+    font-family: Menlo;
+    font-size: 10px;
+    top: 5px;
+    left: 5px;
+}
