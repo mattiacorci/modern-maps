@@ -47,7 +47,7 @@ function rgbToHex(r, g, b) {
 function rgbStrToHex(rgbStr) {
     const RGB_REGEX = /rgb\(([0-9]+),\W*([0-9]+),\W*([0-9]+)\)/i;
     var m = rgbStr.match(RGB_REGEX);
-    return rgbToHex(m[1], m[2], [3]);
+    return rgbToHex(m[1], m[2], m[3]);
 
 }
 
